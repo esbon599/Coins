@@ -111,4 +111,22 @@
             $this->assertEquals([0, 0, 0, 1], $result);
         }
 
+        /*
+        input: 41
+        output: [1,1,1,1]
+        Spec: input an amount in cents and output the minimum number of quarters, dimes, nickels, and pennies
+        */
+        function test_coinAmount_quarterDimeNickelPenny()
+        {
+            //arrange
+            $test_Coin = new Coin;
+            $input = 41;
+
+            //act
+            $result = $test_Coin->coinAmount($input);
+
+            //assert
+            $this->assertEquals([1, 1, 1, 1], $result);
+        }
+
     }
